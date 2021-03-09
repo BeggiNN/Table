@@ -1,0 +1,14 @@
+<?php
+/** @var Perspective\TutorialEntity\Block\EntityRepository $block */
+?>
+<?php
+$categoryId = 23;
+$getProudctcollection = $block->getCategoryProduct($categoryId);
+    echo "<table border='1' align='center'> <th>Name</th><th>Sku</th><th>Price</th>";
+                  foreach ($getProudctcollection as $product) {
+                          echo "<tr>";
+                          $product->getSku();
+                          echo '<td>' . $product->getName() . '</td>' . '<td>' .$product->getSku() . '</td>' . '<td>' . $product->getFinalPrice() . '</td>';
+                          echo "</tr>";
+                  }
+    echo "</table>";
